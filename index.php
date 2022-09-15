@@ -1,20 +1,13 @@
 <?php
 $title = 'My blog';
-$numPosts = 10;
+$numPosts = 0;
 $hasPosts = $numPosts > 0;
 $numPostsDisplay = "\"$numPosts\" posts";
-switch ($numPosts) {
-    case 0:
-        $message = 'There are no posts';
-        break;
-    case 1:
-    case 2:
-    case 3:
-        $message = 'There are a few posts';
-        break;
-    default:
-        $message = 'There are many posts.';
-}
+$message = match ($numPosts) {
+    0 => 'There are no posts.',
+    1, 2, 3 => 'There are some posts.',
+    default => 'There are many posts.'
+};
 ?>
 <h1><?= $title ?></h1>
 <h2><?= $numPostsDisplay ?></h2>
