@@ -1,13 +1,14 @@
 <?php
 $title = 'My blog';
+$post = [
+        'title' => 'How to learn PHP',
+    'content' => 'This is how you learn PHP',
+];
 $numPosts = 0;
-$hasPosts = $numPosts > 0;
 $numPostsDisplay = "\"$numPosts\" posts";
-$tags = ['php', 'docker', 'mysql'];
 ?>
 <h1><?= $title ?></h1>
 <h2><?= $numPostsDisplay ?></h2>
-<?php foreach ($tags as $key => $tag) {
-  echo "$key: $tag<br/>";
-}
-?>
+<h3><?= $post['title'] ?></h3>
+<p><?= $post['content'] ?></p>
+
