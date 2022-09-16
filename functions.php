@@ -5,7 +5,7 @@ require ('classes/author.php');
 function getPosts() : array
 {
 
-    $author = new Author();
+    $author = new Author('Vlad Melnyk');
 
     return [
         [
