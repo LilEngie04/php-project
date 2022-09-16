@@ -2,8 +2,8 @@
 
 class Author
 {
-    public function __construct($name)
+    public function __construct(public string $name)
     {
-        var_dump($name);
+
     }
 }
