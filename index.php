@@ -13,5 +13,7 @@ $numPostsDisplay = "$numPosts $postText";
 <?php for ($i = 0; $i < $numPosts; $i++) : ?>
     <h3><?= $posts[$i]['title'] ?></h3>
     <p><?= $posts[$i]['content'] ?></p>
+    <p>By <?= $posts[$i]['author'] ?></p>
+
 <?php endfor ?>
 

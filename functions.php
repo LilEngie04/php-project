@@ -5,20 +5,26 @@ require ('classes/author.php');
 function getPosts() : array
 {
 
-    $author = new Author('Vlad Melnyk');
+    $author1 = new Author('Vlad Melnyk');
+    $author2 = new Author('Betsy Sue');
 
     return [
         [
             'title' => 'How to learn PHP',
             'content' => 'This is how you learn PHP',
+            'author' => $author1->getName(),
         ],
         [
             'title' => 'How to learn MySQL',
             'content' => 'This is how you learn MySQL',
+            'author' => $author1->getName(),
+
         ],
         [
             'title' => 'How to learn Nginx',
             'content' => 'This is how you learn Nginx',
+            'author' => $author2->getName(),
+
         ],
     ];
 }
